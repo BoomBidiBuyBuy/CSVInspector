@@ -82,8 +82,6 @@ is_half = []
 
 lines_count = 0
 
-#input_file_name = 'MX_2017-02-08.csv'
-
 with codecs.open(input_file_name, 'r', encoding='utf-8') as fin:
     first = True
 
@@ -200,7 +198,7 @@ for inx in range(len(column_name)):
     data.append('[' + str(column_inx_min_length[inx]) + ':' + str(column_inx_max_length[inx]) + ']');
     data.append(', '.join(map(lambda x: x.__name__, column_inx_types[inx])))
     
-    if len(column_inx_values[inx]) <= 4 and len(column_inx_values[inx]) > 0:
+    if len(column_inx_values[inx]) <= 5 and len(column_inx_values[inx]) > 0:
         data.append(', '.join(column_inx_values[inx]))
     elif len(column_inx_values[inx]) == 1:
         data.append("")
